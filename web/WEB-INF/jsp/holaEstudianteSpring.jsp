@@ -12,7 +12,7 @@
         <title>Hola Estudiante</title>
     </head>
     <body>
-        <form action="procesarhola" method="get">
+        <form action="procesarModeloFormulario" method="get">
             <input type="text" name="nombreAlumno"/>
             <input type="submit" name="enviar"/>
         </form>

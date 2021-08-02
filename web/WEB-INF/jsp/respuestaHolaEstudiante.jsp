@@ -13,5 +13,10 @@
     </head>
     <body>
         <h1>Hello World ${param.nombreAlumno}!</h1>
+        <p>
+        <h2>
+            ${mensajeClaro}
+        </h2>
+        </p>
     </body>
 </html>
