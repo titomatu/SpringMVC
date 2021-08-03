@@ -16,6 +16,6 @@
                 welcome page and also update the welcome-file setting in</i>
             <tt>web.xml</tt>.</p>
         
-        <a href="holaestudiante">Ir al Hola Formulario</a>
+        <a href="holaingeniero/holaestudiante">Ir al Hola Formulario</a>
     </body>
 </html>
