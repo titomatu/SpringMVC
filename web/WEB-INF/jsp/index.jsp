@@ -17,5 +17,9 @@
             <tt>web.xml</tt>.</p>
         
         <a href="holaingeniero/holaestudiante">Ir al Hola Formulario</a>
+        
+        <p>
+            <a href="alumnosapi/registrarAlumno">It a Registrar Alumno</a>
+        </p>
     </body>
 </html>
