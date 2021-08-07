@@ -14,9 +14,13 @@
     </head>
     <body>
         <form:form action="registroAlumnoConfirmado" modelAttribute="nuevoAlumno">  
-            Nombre: <form:input path="nombre" />
+            Nombre: <form:input path="nombre" /> <form:errors path="nombre" style="color:red"/>
             <br><br>
             Apellido: <form:input path="apellido" />
+            <br><br>
+            Edad: <form:input path="edad" /> <form:errors path="edad" style="color:red"/>
+            <br><br>
+            Email: <form:input path="email" /> <form:errors path="email" style="color:red"/>
             <br><br>
             Asignatura Optativa: 
             <form:select path="optativa">
@@ -25,10 +29,10 @@
                 <form:option value="ProgramacionII" value="Programacion III"/>
             </form:select>    
             <br><br>
-            Inglés<form:checkbox path="idiomas" value="Inglés"/>
-            Francés<form:checkbox path="idiomas" value="Francés"/>
-            Alemán<form:checkbox path="idiomas" value="Alemán"/>
-            Mandarín<form:checkbox path="idiomas" value="Mandarín"/>
+            Inglés<form:checkbox path="idiomas" value="Ingles"/>
+            Francés<form:checkbox path="idiomas" value="Frances"/>
+            Alemán<form:checkbox path="idiomas" value="Aleman"/>
+            Mandarín<form:checkbox path="idiomas" value="Mandarin"/>
             <br><br>
             <input type="submit" value="Enviar">
         </form:form>

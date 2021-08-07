@@ -13,6 +13,8 @@
     </head>
     <body>
         <h1>Registro del alumno ${nuevoAlumno.nombre} ${nuevoAlumno.apellido} exitoso!</h1>
+        <h2> edad: ${nuevoAlumno.edad}</h2>
+        <h2> Email: ${nuevoAlumno.email}</h2>
         <h2>Se registró la optativa ${nuevoAlumno.optativa}</h2>
         <h2>Los idiomas seleccionados son ${nuevoAlumno.idiomas}</h2>
     </body>

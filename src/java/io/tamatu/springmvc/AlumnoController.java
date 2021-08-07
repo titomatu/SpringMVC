@@ -6,10 +6,15 @@
 package io.tamatu.springmvc;
 
 import io.tamatu.springmvc.model.Alumno;
+import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.web.bind.annotation.InitBinder;
 
 /**
  *
@@ -18,6 +23,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/alumnosapi")
 public class AlumnoController {
+    
+    @InitBinder
+    public void miBinder(WebDataBinder binder){
+        StringTrimmerEditor editor = new StringTrimmerEditor(true);
+        
+        binder.registerCustomEditor(String.class, editor);
+        
+    }
     
     @RequestMapping("/registrarAlumno")
     public String formularioRegistrarAlumno(Model modelo){
@@ -30,7 +43,13 @@ public class AlumnoController {
     }
     
     @RequestMapping("/registroAlumnoConfirmado")
-    public String registroAlumnoConfirmado(@ModelAttribute("nuevoAlumno") Alumno alumno){
+    public String registroAlumnoConfirmado(@Valid @ModelAttribute("nuevoAlumno") Alumno alumno,
+                                            BindingResult resultadoValidacion){
+        
+        if(resultadoValidacion.hasErrors()){
+            return "registroAlumno";
+        }
+        
         return "registroConfirmadoAlumno";
     }
 }
