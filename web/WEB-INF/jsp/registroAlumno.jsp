@@ -22,6 +22,8 @@
             <br><br>
             Email: <form:input path="email" /> <form:errors path="email" style="color:red"/>
             <br><br>
+            Codigo Postal: <form:input path="codigo_postal" /> <form:errors path="codigo_postal" style="color:red"/>
+            <br><br>
             Asignatura Optativa: 
             <form:select path="optativa">
                 <form:option value="ProgramacionI" value="Programacion I"/>

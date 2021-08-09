@@ -10,6 +10,7 @@ package io.tamatu.springmvc.model;
 //import jakarta.validation.constraints.NotNull;
 //import jakarta.validation.constraints.Size;
 //import jakarta.validation.constraints.Email;
+import customvalidator.CPostalMadrid;
 import java.util.Objects;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
@@ -23,20 +24,22 @@ import javax.validation.constraints.Size;
  * @author titonitola-maturana
  */
 public class Alumno {
-    
+
     @NotNull
-    @Size(min=2, message="Campo requerido")
+    @Size(min = 2, message = "Campo requerido")
     private String nombre;
     private String apellido;
     private String optativa;
     private String idiomas;
-    @Min(value=10, message="No se permiten edades menores de 10")
-    @Max(value=100, message="No se permiten edades mayores de 100")
+    @Min(value = 10, message = "No se permiten edades menores de 10")
+    @Max(value = 100, message = "No se permiten edades mayores de 100")
     private int edad;
     @Email
-    @Pattern(regexp="^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message="Por favor ingrese una dirección de e-mail válida")
+    @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "Por favor ingrese una dirección de e-mail válida")
     //https://regexr.com/3e48o
     private String email;
+    @CPostalMadrid
+    private String codigo_postal;
 
     public Alumno(String nombre, String apellido) {
         this.nombre = nombre;
@@ -120,5 +123,13 @@ public class Alumno {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setCodigo_postal(String codigo_postal) {
+        this.codigo_postal = codigo_postal;
+    }
+
+    public String getCodigo_postal() {
+        return codigo_postal;
     }
 }
