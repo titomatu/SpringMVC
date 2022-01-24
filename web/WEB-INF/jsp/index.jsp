@@ -16,10 +16,10 @@
                 welcome page and also update the welcome-file setting in</i>
             <tt>web.xml</tt>.</p>
         
-        <a href="holaingeniero/holaestudiante">Ir al Hola Formulario</a>
+        <a href="WebSpringMVC/holaingeniero/holaestudiante">Ir al Hola Formulario</a>
         
         <p>
-            <a href="alumnosapi/registrarAlumno">It a Registrar Alumno</a>
+            <a href="WebSpringMVC/alumnosapi/registrarAlumno">Ir a Registrar Alumno</a>
         </p>
     </body>
 </html>
